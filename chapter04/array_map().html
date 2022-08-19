@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var userList = [
+        {
+          firstName: "재석",
+          lastName: "유",
+          email: "yu@gmail.com",
+        },
+        {
+          firstName: "종국",
+          lastName: "김",
+          email: "kim@gmail.com",
+        },
+        {
+          firstName: "세찬",
+          lastName: "양",
+          email: "yang@gmail.com",
+        },
+        {
+          firstName: "석진",
+          lastName: "지",
+          email: "ji@gmail.com",
+        },
+      ];
+
+      // Map Object가 아니다  map()이다
+      var userList2 = userList.map(function (user) {
+        return {
+          fullName: user.lastName + user.firstName,
+          firstName: user.firstName,
+          lastName: user.lastName,
+          email: user.email,
+        };
+      });
+      //Object를 map()을 이용해 데이터 구조를 변환한 Object
+      console.log(userList2);
+    </script>
+  </body>
+</html>
